@@ -1,35 +1,66 @@
 import java.util.ArrayList;
-
+/**
+ * Sorting of inputted lists via bubble or insertion sort
+ * @author Amjad Omer
+ */
 public class Listing {
     protected String title;
     ArrayList<String> Temp = new ArrayList<String>();
     BubbleSort sortBehavior;
 
+    /**
+     * Sets the name of the listing
+     * @return The title of the current list
+     */
     public Listing(String title) {
         this.title = title;
     }
 
+    /**
+     * 
+     * Adds each item to the list
+     */
     public void add(String item) {
         Temp.add(item);
     }
 
+    /**
+     * 
+     * Removes an item from the list
+     */
     public void remove(String item) {
         Temp.remove(item);
     }
 
+    /**
+     * 
+     * @return The title of the list
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * 
+     * Sets the sort behavior to bubble sort by default
+     */
     public void setSortBehavior(SortBehavior sortBehavior) {
         SortBehavior.sort(Temp);
     }
 
+    /**
+     * 
+     * @return The sorted version of the inputted list
+     */
     public ArrayList<String> getSortedList() {
 
         return SortBehavior.sort(Temp);
     }
 
+    /**
+     * 
+     * @return The original version of the inputted list
+     */
     public ArrayList<String> getUnsortedList() {
         return Temp;
     }
