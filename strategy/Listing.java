@@ -10,7 +10,7 @@ public class Listing {
 
     /**
      * Sets the name of the listing
-     * @return The title of the current list
+     * @param title of the current list
      */
     public Listing(String title) {
         this.title = title;
@@ -18,7 +18,7 @@ public class Listing {
 
     /**
      * 
-     * Adds each item to the list
+     * @param item added to the list
      */
     public void add(String item) {
         Temp.add(item);
@@ -26,7 +26,7 @@ public class Listing {
 
     /**
      * 
-     * Removes an item from the list
+     * @param item removed from the list
      */
     public void remove(String item) {
         Temp.remove(item);
