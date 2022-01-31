@@ -1,12 +1,22 @@
 package decorator;
-
+/**
+ * replaces letters with symbols
+ * @author Amjad Omer
+ */
 public class Symbols extends PasswordDecorator{
+    /**
+     * initializes password
+     * @param passwordBeginning
+     */
     public Symbols(Password passwordBeginning){
         super(passwordBeginning);
         this.passwordBeginning = passwordBeginning;
         password = passwordBeginning.getPassword();
     }
-
+    /**
+     * replaces certain letters with numbers or symbols
+     * @return password
+     */
     public String getPassword(){
             password = password.replaceAll("a", "\\@");
             password = password.replaceAll("b", "8");

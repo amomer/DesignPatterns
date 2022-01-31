@@ -1,15 +1,24 @@
 package decorator;
 
 import java.util.Random;
-
+/**
+ * adds symbols after character in the string
+ * @author Amjad Omer
+ */
 public class SpecialChars extends PasswordDecorator{
-    
+    /**
+     * initializes password
+     * @param passwordBeginning
+     */
     public SpecialChars(Password passwordBeginning){
         super(passwordBeginning);
         this.passwordBeginning = passwordBeginning;
         password = passwordBeginning.getPassword();
     }
-
+    /**
+     * 30% chance to add a random symbol after each character in the string
+     * @return password
+     */
     public String getPassword(){
         Random chanceOfSymbol = new Random();
         Random typeOfSymbol = new Random();
