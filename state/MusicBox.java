@@ -11,7 +11,7 @@ public class MusicBox {
     public MusicBox(){
         englishState = new EnglishState(this);
         frenchState = new FrenchState(this);
-        spanishState = new Spanish(this);
+        spanishState = new SpanishState(this);
     }
 
     public void pressStarButton(){
@@ -34,7 +34,7 @@ public class MusicBox {
         state.pressSpanishButton();
     }
 
-    public setState(State state){
+    public void setState(State state){
         this.state = state;
     }
 
@@ -50,9 +50,9 @@ public class MusicBox {
         return spanishState;
     }
 
-    public playSong(String songName, ArrayList<String> lyrics){
+    public void playSong(String songName, ArrayList<String> lyrics){
         System.out.println("Playing: " + songName);
-        for(i=0;i<lyrics.size();i++)
+        for(int i=0;i<lyrics.size();i++)
             System.out.println(lyrics.get(i));
     }
 }
