@@ -1,2 +1,2 @@
 # DesignPatterns
-CSCE 247 code
+Various design patterns in Java
